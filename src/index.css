@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+:root {
+  --primary-bg: #001f54;
+  --secondary-bg: #0a1128;
+  --primary-text: #fefcfb;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--primary-text);
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: var(--primary-bg);
 }
