@@ -5,12 +5,13 @@ export const HeaderContainer = styled.nav`
   align-items: center;
   justify-content: center;
   background-color: var(--secondary-bg);
+  height: 10vh;
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem;
+    padding: 0 2rem;
     gap: 2rem;
     h1 {
       text-decoration: none;

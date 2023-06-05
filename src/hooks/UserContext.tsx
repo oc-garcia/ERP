@@ -1,12 +1,12 @@
 import { createContext, useState } from "react";
 import { signInWithPopup, signOut } from "firebase/auth";
-import { auth, provider } from "../../services/firebase.js";
 import { useNavigate } from "react-router-dom";
+import { auth, provider } from "../firebase-config";
 
-export const UserContext = createContext();
+export const UserContext = createContext({});
 
-export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+export const UserProvider = ({ children }: { children: React.ReactNode }) => {
+  const [user, setUser] = useState({});
   const navigate = useNavigate();
 
   const handleSignIn = async () => {
@@ -21,7 +21,7 @@ export const UserProvider = ({ children }) => {
   const handleLogOut = async () => {
     try {
       await signOut(auth);
-      setUser(null);
+      setUser({});
       navigate("/");
     } catch (error) {
       console.error(error);
