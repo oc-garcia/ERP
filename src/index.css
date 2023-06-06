@@ -26,3 +26,7 @@ main {
   justify-content: center;
   height: 90vh;
 }
+
+input {
+  color: var(--secondary-bg);
+}

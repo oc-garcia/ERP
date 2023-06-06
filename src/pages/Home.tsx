@@ -25,7 +25,6 @@ const HomeContainer = styled.section`
 
 export default function Home() {
   const { user, handleSignIn } = useContext(UserContext);
-  console.log(user);
   return (
     <HomeContainer>
       {user == null && (
