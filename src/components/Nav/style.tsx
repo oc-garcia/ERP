@@ -28,6 +28,12 @@ export const HeaderContainer = styled.nav`
         border: 1px solid var(--primary-text);
         border-radius: 10px;
       }
+      button {
+        border: 1px solid var(--primary-text);
+        padding: 0rem 1rem;
+        border-radius: 10px;
+        background-color: var(--secondary-bg);
+      }
     }
   }
 `;

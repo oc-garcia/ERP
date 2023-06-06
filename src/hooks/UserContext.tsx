@@ -2,12 +2,7 @@ import { createContext, useState } from "react";
 import { User, signInWithPopup, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth, provider } from "../firebase-config";
-
-interface IUserContext {
-  user: User | null;
-  handleSignIn: () => void;
-  handleLogOut: () => void;
-}
+import { IUserContext } from "../types/IUserContext";
 
 export const UserContext = createContext<IUserContext>({
   user: null,
