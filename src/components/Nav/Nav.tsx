@@ -14,8 +14,6 @@ export default function Nav() {
         </Link>
         {user !== null && (
           <div>
-            <Link to="/catalogue">Catalogue</Link>
-            <Link to="/sales">Sales Tool</Link>
             <button onClick={handleLogOut}>
               <SignOut size={32} color="#fefcfb" />
             </button>
