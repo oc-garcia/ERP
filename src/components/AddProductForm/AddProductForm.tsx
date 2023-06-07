@@ -1,4 +1,4 @@
-import { Dispatch, FormEvent, SetStateAction, useState } from "react";
+import { Dispatch, FormEvent, SetStateAction } from "react";
 import { IProduct } from "../../types/IProduct";
 import { CaretDoubleDown, CaretDoubleUp, Check } from "@phosphor-icons/react";
 import { AddProductFormContainer } from "./style";
@@ -7,11 +7,17 @@ interface IProductForm {
   newProduct: IProduct;
   setNewProduct: Dispatch<SetStateAction<IProduct>>;
   handleSubmit: (e: FormEvent) => void;
+  displayForm: boolean;
+  setDisplayForm: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function AddProductForm({ newProduct, setNewProduct, handleSubmit }: IProductForm) {
-  const [displayForm, setDisplayForm] = useState(false);
-
+export default function AddProductForm({
+  newProduct,
+  setNewProduct,
+  handleSubmit,
+  displayForm,
+  setDisplayForm,
+}: IProductForm) {
   const handleDisplayForm = () => {
     setDisplayForm(!displayForm);
   };
@@ -61,7 +67,7 @@ export default function AddProductForm({ newProduct, setNewProduct, handleSubmit
             }}
           />
           <button type="submit">
-            <Check size={32} color="#0a1128" />
+            <Check size={32} color="#fff" />
           </button>
         </>
       )}

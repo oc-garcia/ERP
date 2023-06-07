@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const AddProductFormContainer = styled.form`
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -10,6 +11,7 @@ export const AddProductFormContainer = styled.form`
   div {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 0.5rem;
     h2 {
       cursor: pointer;
@@ -22,7 +24,8 @@ export const AddProductFormContainer = styled.form`
   }
   button {
     border-radius: 10px;
-    border: none;
+    border: 1px solid var(--primary-text);
     cursor: pointer;
+    background-color: var(--secondary-bg);
   }
 `;
