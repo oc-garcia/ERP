@@ -6,6 +6,7 @@ export const HomeContainer = styled.section`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
+  box-sizing: border-box;
   button {
     padding: 0.5rem 3rem;
     cursor: pointer;
